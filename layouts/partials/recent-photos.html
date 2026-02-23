@@ -1,0 +1,18 @@
+<section>
+  <h2 class="column-header">Recent Photos</h2>
+  <div class="photos-grid">
+    {{ range .Site.Params.recent_photos }}
+      {{- if .url -}}
+        <div class="photo-item">
+          <a href="{{ .url }}">
+            <img src="{{ .src }}" alt="{{ .alt }}" />
+          </a>
+        </div>
+      {{- else -}}
+        <div class="photo-item">
+          <img src="{{ .src }}" alt="{{ .alt }}" />
+        </div>
+      {{- end -}}
+    {{ end }}
+  </div>
+</section>

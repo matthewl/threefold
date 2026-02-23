@@ -1,0 +1,11 @@
+{{ define "main" }}
+
+<article class="h-entry page single-page blog-post">
+  {{ if .Title }}
+  <h1 class="page-title p-name">{{ .Title }}</h1>
+  {{ end }}
+
+  <section class="e-content page-body post-body">{{ .Content }}</section>
+</article>
+
+{{ end }}

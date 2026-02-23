@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+  {{ partial "head.html" . }}
+  <body>
+    <div class="main-container">
+      <aside class="column left-column">
+        {{ partial "left-sidebar.html" . }}
+      </aside>
+      <main class="column center-column">
+        {{ block "main" . }}{{ end }}
+      </main>
+      <aside class="column right-column">
+        {{ partial "right-sidebar.html" . }}
+      </aside>
+    </div>
+    {{ partial "custom_footer.html" . }}
+  </body>
+</html>

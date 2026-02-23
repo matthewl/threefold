@@ -1,0 +1,46 @@
+{{ define "main" }}
+
+<header class="category-header">
+  <h2>{{ .Title | safeHTML }}</h2>
+  {{- with .Content }} {{ . | safeHTML }} {{- end }}
+</header>
+
+<div class="h-feed">
+  {{ $paginator := .Paginate (where .Site.Pages.ByDate.Reverse "Type" "post") }}
+  {{ range $paginator.Pages }}
+  <article class="h-entry blog-post">
+    {{ if .Title }}
+    <h3 class="post-title">
+      <a href="{{ .Permalink }}" class="p-name u-url">{{ .Title }}</a>
+    </h3>
+    {{ end }}
+
+    <div class="post-meta">
+      <a href="{{ .Permalink }}" class="u-url">
+        <time datetime='{{ .Date.Format "2006-01-02" }}' class="dt-published post-date">
+          {{ .Date.Format (default "January 2, 2006" .Site.Params.dateFormat) }}
+        </time>
+      </a>
+      {{- with .GetTerms "categories" }}
+      <div class="post-categories">
+        {{- range . }}
+        <a href="{{ .RelPermalink }}" class="category-tag">{{ .LinkTitle }}</a>
+        {{- end }}
+      </div>
+      {{- end }}
+    </div>
+
+    {{ if .Params.custom_summary }}
+    <div class="p-summary post-body">
+      <p>{{ .Summary | safeHTML }}</p>
+    </div>
+    {{ else }}
+    <div class="e-content post-body">{{ .Content }}</div>
+    {{ end }}
+  </article>
+  {{ end }}
+
+  {{ partial "pagination.html" $paginator }}
+</div>
+
+{{ end }}
