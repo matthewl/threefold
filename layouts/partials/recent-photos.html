@@ -3,17 +3,9 @@
   <div class="photos-grid">
     {{ range .Site.Params.recent_photos }}
       {{- $src := index . "src" -}}
-      {{- $alt := index . "alt" -}}
-      {{- $url := index . "url" -}}
       {{- if $src -}}
         <div class="photo-item">
-          {{- if $url -}}
-            <a href="{{ $url }}">
-              <img src="{{ $src }}" alt="{{ $alt }}" />
-            </a>
-          {{- else -}}
-            <img src="{{ $src }}" alt="{{ $alt }}" />
-          {{- end -}}
+          <img src="{{ $src }}" />
         </div>
       {{- end -}}
     {{ end }}

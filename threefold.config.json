@@ -3,67 +3,24 @@
     "paginate": 10,
     "recent_photos": [
       {
-        "src": "",
-        "alt": "",
-        "url": ""
+        "src": ""
       },
       {
-        "src": "",
-        "alt": "",
-        "url": ""
+        "src": ""
       },
       {
-        "src": "",
-        "alt": "",
-        "url": ""
+        "src": ""
       },
       {
-        "src": "",
-        "alt": "",
-        "url": ""
+        "src": ""
       }
     ],
-    "social_links": [
-      {
-        "icon": "sourcehut",
-        "name": "SourceHut",
-        "url": ""
-      },
-      {
-        "icon": "github",
-        "name": "Github",
-        "url": ""
-      },
-      {
-        "icon": "gitlab",
-        "name": "GitLab",
-        "url": ""
-      },
-      {
-        "icon": "mastodon",
-        "name": "Mastodon",
-        "url": ""
-      },
-      {
-        "icon": "bluesky",
-        "name": "Bluesky",
-        "url": ""
-      },
-      {
-        "icon": "x",
-        "name": "X",
-        "url": ""
-      },
-      {
-        "icon": "rss",
-        "name": "RSS",
-        "url": ""
-      },
-      {
-        "icon": "email",
-        "name": "Email",
-        "url": ""
-      }
-    ]
+    "sourcehut_username": "",
+    "github_username": "",
+    "gitlab_username": "",
+    "mastodon_username": "",
+    "bluesky_username": "",
+    "email": "",
+    "rss_url": ""
   }
 }
