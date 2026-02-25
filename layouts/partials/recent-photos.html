@@ -2,10 +2,9 @@
   <h2 class="column-header">Recent Photos</h2>
   <div class="photos-grid">
     {{ range .Site.Params.recent_photos }}
-      {{- $src := index . "src" -}}
-      {{- if $src -}}
+      {{- if . -}}
         <div class="photo-item">
-          <img src="{{ $src }}" />
+          <img src="{{ . }}" />
         </div>
       {{- end -}}
     {{ end }}

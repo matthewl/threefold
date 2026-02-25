@@ -1,20 +1,7 @@
 {
   "params": {
     "paginate": 10,
-    "recent_photos": [
-      {
-        "src": ""
-      },
-      {
-        "src": ""
-      },
-      {
-        "src": ""
-      },
-      {
-        "src": ""
-      }
-    ],
+    "recent_photos": ["", "", "", ""],
     "sourcehut_username": "",
     "github_username": "",
     "gitlab_username": "",
